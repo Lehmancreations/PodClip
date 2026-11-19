@@ -6,6 +6,14 @@
     <language>en</language>
     <!-- RELEASES: scripts/release.sh adds each new version here, newest first -->
     <item>
+      <title>Version 1.0.2</title>
+      <pubDate>Thu, 19 Nov 2026 11:42:42 -0500</pubDate>
+      <sparkle:version>133</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/lehmancreations/PodClip-Public/releases/download/v1.0.2/PodClip.zip" sparkle:edSignature="iEoreqPEg2HXYRdQRUWRdHv6QEe47IQgxa0GKBqkUtYjPH1B/bgDNZ4BIS/Qx29bcjEOe4374nbZLalbgxgqCA==" length="3019311" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Version 1.0.1</title>
       <pubDate>Fri, 13 Nov 2026 10:32:51 -0500</pubDate>
       <sparkle:version>75</sparkle:version>

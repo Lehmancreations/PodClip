@@ -148,10 +148,18 @@
       <h2 class="s"><a href="#record">Recording</a></h2>
       <p>Pick an input at the top (the built-in mic, a USB interface, a mixer or a virtual device such as Loopback). The level meter shows what PodClip hears. You can't change the input while recording.</p>
       <p>Press <b>Record</b> to start and <b>Stop</b> to finish. The audio is saved to disk as it is recorded, so a long episode doesn't use up memory. An hour is about 345 MB. Keep <b>Follow live</b> ticked to stay at the newest text.</p>
+      <h3>Check the level before you record</h3>
+      <p>The level meter at the top is live whenever PodClip is the front app, so you can see the input level and set the volume before you press Record. Nothing is recorded or saved while it listens. Because it uses the microphone, the Mac's microphone indicator is on while it listens, and it stops when you switch to another app. You can turn it off in <b>Settings ▸ Recording</b>.</p>
+      <h3>Input volume</h3>
+      <p>If the sound coming in is too loud and you can't turn it down on the device, click the <b>level meter</b> at the top. A slider lets you lower (or raise) the input volume from −24 dB to +12 dB; <b>Reset to 0 dB</b> puts it back. It applies to what is recorded and transcribed, can be changed while recording, and is remembered. When it isn't 0, the setting shows beside the meter, such as "−6 dB".</p>
+      <p>The change is part of the recording, so it can't be undone afterwards. It can't fix a sound that is already distorted before it reaches your Mac, and boosting also boosts background noise, so keep boosts small.</p>
       <h3>Pause and resume</h3>
       <p><b>Right-click</b> (or control-click) the Stop button while recording to pause. It turns orange and says <b>Resume</b>, and a separate <b>Stop</b> button appears. Click <b>Resume</b> to carry on. Paused time is not in the recording. The Mac's microphone indicator stays on while paused.</p>
       <h3>Capture the last few seconds</h3>
       <p>Heard something great? Use <b>Capture last</b> on the soundboard (10 seconds to 5 minutes) to save the most recent audio as a clip, with the words spoken in that stretch. It is named like "Last 30s @ 12:34", and you can trim it afterwards. A Stream Deck key, Companion and OSC can do the same.</p>
+      <h3>Drop a marker</h3>
+      <p>Press <kbd>⌘M</kbd> (or <b>File ▸ Add Marker</b>) while recording to drop a marker at that moment, for something you want to find later. It shows in the transcript as a flag between the sentences either side of it. Right-click a marker to rename or delete it.</p>
+      <p>Markers are also saved inside the recording itself: as markers in a CAF file, or as chapters in an MP3, which podcast apps, VLC and many audio editors can show. The recording is updated when you stop. (<b>Window ▸ Minimize</b> no longer uses <kbd>⌘M</kbd>.)</p>
       <h3>Back to live</h3>
       <p>Press <kbd>⌘L</kbd> (Edit ▸ Back to Live) to clear the search and selection and jump to the newest text.</p>
     </section>
@@ -193,6 +201,16 @@
 
     <section id="edit-clip">
       <h2 class="s"><a href="#edit-clip">Editing a clip</a></h2>
+      <h3>Trim by the waveform</h3>
+      <p>Right-click a pad and choose <b>Trim Visually…</b> to see the audio around the clip as a waveform, with the transcript words along the top. Drag the two <b>orange handles</b> to cut the clip tighter, or pull them outward to take in more of the recording, for example when there's a gap of silence before the first word. You're not limited to the words.</p>
+      <ul>
+        <li>Drag across the waveform to <b>highlight</b> a stretch, then press <b>New Clip from Highlight</b> to make a separate pad from it. The original stays as it is.</li>
+        <li><b>Play</b> (<kbd>Space</kbd>) plays the highlight, or the trimmed clip if nothing is highlighted, through your preview output.</li>
+        <li><b>Save Changes</b> replaces the pad's audio in the same slot, keeping its name, color, key and number. <b>Reset</b> puts the handles back.</li>
+        <li><b>Zoom to Clip</b>, <b>Zoom In</b>, <b>Zoom Out</b>, <b>Earlier</b> and <b>Later</b> change what part of the recording you see.</li>
+      </ul>
+      <p>The recording is kept, so you can reopen the window and widen a trim again whenever you like. A pad with no recording behind it (an audio file you dropped in) can only be trimmed shorter, but its original audio is kept, so you can restore it. Exports, dragging out and the Stream Deck all use the trimmed clip.</p>
+      <h3>Edit by words</h3>
       <p>Right-click a pad and choose <b>Edit Clip…</b>. The transcript scrolls to its words and highlights them, an orange banner shows which clip you are editing, and <b>Clip</b> becomes <b>Save Edit</b>. Change the words, trim with Start / End or Head / Tail, or rename it. <b>Save Edit</b> replaces the clip in the same slot, so its position, key and numbers stay the same. <b>Cancel</b> leaves it untouched.</p>
       <p>Editing needs the episode's recording and transcript, so it isn't available after you delete them, or for pads made from dropped-in audio files.</p>
     </section>
@@ -207,7 +225,7 @@
         <li><b>Stop all</b> silences everything. Holding <kbd>Esc</kbd> for half a second does the same.</li>
         <li><kbd>⌥</kbd>-click a pad (or right-click ▸ <b>Stop</b>) stops just that pad.</li>
         <li>Right-click a playing pad ▸ <b>Pause</b>, then <b>Resume</b>. A paused pad shows a dashed outline.</li>
-        <li><b>Play through</b> chooses the output device, for example a separate bus so clips don't bleed into your own microphone. The slider next to it sets the overall volume.</li>
+        <li><b>Settings ▸ Sound ▸ Soundboard output</b> chooses the output device (<b>Play through</b>), for example a separate bus so clips don't bleed into your own microphone, and sets the overall <b>Volume</b>.</li>
       </ul>
 
       <h3>When a playing pad is triggered again</h3>
@@ -215,6 +233,18 @@
 
       <h3>Listen privately first</h3>
       <p><kbd>⇧</kbd>-click a pad to play it through the <b>preview output</b> (for example your headphones) so you can audition it without it going on air. Choose the device in <b>Settings ▸ Sound ▸ Preview through</b>. <kbd>⇧</kbd>-click again to stop. (With pads already selected, <kbd>⇧</kbd>-click extends the selection instead; right-click ▸ <b>Play Through Preview</b> still works.)</p>
+
+      <h3>Scratch a clip like a record</h3>
+      <p>Right-click a pad and choose <b>Scratch…</b> to open a window with the clip's waveform wrapped around a record. Drag around the record with the mouse to push it, like a DJ: the sound follows your hand, plays backwards when you push back, and goes quiet when you hold still. A sideways swipe on a trackpad moves it too.</p>
+      <ul>
+        <li><b>Spin</b> (<kbd>Space</kbd>) turns the record's motor on; while it is on and you let go, the record carries on at normal speed. The button becomes <b>Pause</b>, and the record winds down slowly with the pitch dropping, like a turntable.</li>
+        <li><b>Start</b> (<kbd>S</kbd>) puts the record back at the beginning, and <b>Loop</b> (<kbd>L</kbd>) repeats it.</li>
+        <li><b>Play</b> (<kbd>P</kbd>) starts the clip right away at full speed from the beginning, with no spin-up.</li>
+        <li><b>Cut</b> (hold the button, or hold <kbd>C</kbd>) silences the sound without stopping the record, like a DJ's crossfader.</li>
+        <li>Press <kbd>M</kbd> to pause a MIDI jog wheel, fader or knob, so you can re-centre it without moving the record. Press it again to resume.</li>
+        <li>It plays through the soundboard's output device and volume (<b>Settings ▸ Sound</b>).</li>
+      </ul>
+      <p>With a MIDI jog wheel, fader or knob, open <b>Settings ▸ MIDI ▸ Scratch</b>, choose <b>Learn Jog Wheel, Fader or Knob…</b> and move it. A fader or knob (such as on a RØDECaster) sends its position, so set <b>It sends</b> to <b>Fader or knob</b>: sliding it pushes the record, and the full travel is one turn of the record. A jog wheel sends how far it turned, so choose the jog style that moves the record the right way. You can also learn a jog wheel's touch sensor and a Cut button.</p>
 
       <h3>Organizing pads</h3>
       <ul>
@@ -293,6 +323,7 @@
         <tr><td><kbd>⌘O</kbd></td><td>Open an audio file to transcribe</td></tr>
         <tr><td><kbd>⌘F</kbd></td><td>Search the transcript</td></tr>
         <tr><td><kbd>⌘L</kbd></td><td>Back to live</td></tr>
+        <tr><td><kbd>⌘M</kbd></td><td>Drop a marker into the recording</td></tr>
         <tr><td><kbd>⌘1</kbd> – <kbd>⌘9</kbd></td><td>Play pads 1 to 9</td></tr>
         <tr><td><kbd>⌘,</kbd></td><td>Settings</td></tr>
         <tr><td><kbd>Esc</kbd></td><td>Clear the clip selection. Hold for half a second to stop every clip</td></tr>
@@ -353,7 +384,7 @@
         <tr><td>Corrections</td><td>The replace list for misspelled words</td></tr>
         <tr><td>License</td><td>Your license status, enter a key, buy, or deactivate this Mac</td></tr>
         <tr><td>Updates</td><td>Automatic update checks and Check Now</td></tr>
-        <tr><td>Sound</td><td>Where new clips go, what a second click does, where previews play, the Shared pads row</td></tr>
+        <tr><td>Sound</td><td>The soundboard's output device and volume, where new clips go, what a second click does, where previews play, the Shared pads row</td></tr>
         <tr><td>Keyboard</td><td>Pad shortcuts, hold-Esc-to-stop, Reset all</td></tr>
         <tr><td>MIDI</td><td>Device, pad assignments, Last message monitor</td></tr>
       </table>
@@ -395,7 +426,7 @@
       </details>
       <details>
         <summary>Clips are being recorded into my episode</summary>
-        <p>If clips play through speakers near your microphone, they get recorded and transcribed. Use <b>Play through</b> to send the soundboard to a separate output, or wear headphones.</p>
+        <p>If clips play through speakers near your microphone, they get recorded and transcribed. Use <b>Settings ▸ Sound ▸ Play through</b> to send the soundboard to a separate output, or wear headphones.</p>
       </details>
       <details>
         <summary>A Stream Deck key or Companion button does nothing</summary>
