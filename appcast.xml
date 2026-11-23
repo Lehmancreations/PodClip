@@ -7,6 +7,15 @@
     <!-- RELEASES: scripts/release.sh adds each new version here, newest first -->
     <item>
       <title>Version 1.0.2</title>
+      <pubDate>Sun, 22 Nov 2026 11:37:49 -0500</pubDate>
+      <sparkle:version>138</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[New: Export Audiogram — turn any clip into a shareable MP4 video (16:9, 9:16 or 1:1) with animated waveform styles, show presets and custom titles.]]></description>
+      <enclosure url="https://github.com/lehmancreations/PodClip-Public/releases/download/v1.0.2/PodClip.zip" sparkle:edSignature="XXQq0QvnCxP3MWzChyf7bhRGRAuYmzG/DSA+J0twrWENvbXjgLUVpXWHz0DRSGh1cUzu+nng/cwZTwQUbu3vBw==" length="3221644" type="application/octet-stream"/>
+    </item>
+    <item>
+      <title>Version 1.0.2</title>
       <pubDate>Thu, 19 Nov 2026 11:42:42 -0500</pubDate>
       <sparkle:version>133</sparkle:version>
       <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
